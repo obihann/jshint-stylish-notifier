@@ -1,14 +1,8 @@
 {
-  "name": "jshint-stylish",
-  "version": "2.2.0",
-  "description": "Stylish reporter for JSHint",
+  "name": "jshint-stylish-notifier",
+  "version": "0.0.1",
+  "description": "Stylish reporter for JSHint with notifications",
   "license": "MIT",
-  "repository": "sindresorhus/jshint-stylish",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
   "engines": {
     "node": ">=0.10.0"
   },
@@ -30,12 +24,13 @@
     "pretty"
   ],
   "dependencies": {
+    "beeper": "^1.1.0",
     "chalk": "^1.0.0",
     "log-symbols": "^1.0.0",
+    "node-notifier": "^4.6.0",
     "plur": "^2.1.0",
     "string-length": "^1.0.0",
-    "text-table": "^0.2.0",
-    "beeper": "^1.1.0"
+    "text-table": "^0.2.0"
   },
   "devDependencies": {
     "mocha": "*",

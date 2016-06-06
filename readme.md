@@ -1,4 +1,12 @@
-# jshint-stylish [![Build Status](https://travis-ci.org/sindresorhus/jshint-stylish.svg?branch=master)](https://travis-ci.org/sindresorhus/jshint-stylish)
+# jshint-stylish-notify
+
+Ported from [sindresorhus/jshint-stylish](https://github.com/sindresorhus/jshint-stylish) with the addition of [node-notifier](https://github.com/mikaelbr/node-notifier) JSHint will now display notifications. 
+
+From [node-notifier](https://github.com/mikaelbr/node-notifier) 
+
+> Using Notification Center for Mac, notify-osd/libnotify-bin for Linux, Toasters for Windows 8/10, or taskbar Balloons for earlier Windows versions. If none of these requirements are met, Growl is used.   
+
+From [sindresorhus/jshint-stylish](https://github.com/sindresorhus/jshint-stylish)
 
 > Stylish reporter for [JSHint](https://github.com/jshint/jshint)
 
@@ -12,7 +20,7 @@ Compared to the default reporter:
 ## Install
 
 ```
-$ npm install --save-dev jshint-stylish
+$ npm install --save-dev jshint-stylish-notify
 ```
 
 
@@ -73,4 +81,4 @@ gulp.task('default', () =>
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Jeffrey Hann](http://jeffreyhann.ca)
