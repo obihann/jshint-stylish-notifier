@@ -2,12 +2,14 @@
   "name": "jshint-stylish-notifier",
   "version": "0.0.1",
   "description": "Stylish reporter for JSHint with notifications",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/obihann/jshint-stylish-notifier.git"
+  },
   "license": "MIT",
+  "author": "Jeffrey Hann",
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && mocha"
   },
   "files": [
     "index.js"
