@@ -69,30 +69,33 @@
 					beeper();
 				}
 
-				var title = "Build Pass";
-				var message = "JSHint build completed Successfully";
-				var icon = path.join(__dirname, 'pass.png');
+				var title, message, icon, notify;
 
-				if (errorCount > 0 && warningCount > 0) {
+				if (errorCount > 0 && warningCount > 0 && options.notifyOnWarning) {
 					title = "Build Failure";
 					message = 'JSHint build failed with ' + errorCount + ' errors and ' + warningCount + ' warnings';
 					icon = path.join(__dirname, 'fail.png');
+					notify = true;
 				} else if (errorCount > 0) {
 					title = "Build Failure";
 					message = 'JSHint failed with ' + errorCount + ' errors';
 					icon = path.join(__dirname, 'fail.png');
-				} else if (warningCount > 0) {
+					notify = true;
+				} else if (warningCount > 0 && options.notifyOnWarning) {
 					title = "Build Completed";
 					message = 'JSHint completed with ' + warningCount + ' warnings';
 					icon = path.join(__dirname, 'warning.png');
+					notify = true;
 				}
 
-				notifier.notify({
-					title:        title,
-					message:      message,
-					icon:		  path.join(__dirname, 'gulp.png'),
-					contentImage: icon,
-				});
+				if (notify === true) {
+					notifier.notify({
+						title:        title,
+						message:      message,
+						icon:		  path.join(__dirname, 'gulp.png'),
+						contentImage: icon,
+					});
+				}
 			} else {
 				ret += '  ' + logSymbols.success + ' No problems';
 				ret = '\n' + ret.trim();
